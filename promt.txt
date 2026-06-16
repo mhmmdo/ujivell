@@ -1,0 +1,26 @@
+Tolong buatkan aplikasi Sistem Informasi Manajemen Peserta Sertifikasi (SIM-PESERTA) menggunakan Laravel versi terbaru. Saya ingin aplikasi ini bersih, fungsional, dan memiliki desain visual premium yang tidak terlihat seperti template AI biasa.
+
+Berikut adalah spesifikasi detailnya:
+
+1. Arsitektur & Struktur Laravel:
+   - Gunakan Controller (PesertaController) untuk menangani CRUD dan pencarian.
+   - Gunakan Eloquent Model dengan relasi: Skema (hasMany Peserta) dan Peserta (belongsTo Skema).
+   - Buat file Migration untuk 2 tabel: 
+     * `skemas` (id, kode_skema, nama_skema, jenis: wajib/pilihan)
+     * `pesertas` (id, nomor_peserta [unique], nama_lengkap, skema_id [foreign key], status: Terdaftar/Proses/Kompeten/Belum Kompeten, tanggal_uji)
+   - Buat Seeder untuk mengisi data contoh skema dan beberapa data peserta awal agar langsung terisi saat migrasi dijalankan.
+
+2. Fitur Utama:
+   - CRUD (Create, Read, Update, Delete) data peserta.
+   - Pencarian data berdasarkan nama atau nomor peserta.
+   - Filter data peserta berdasarkan dropdown skema sertifikasi yang dipilih.
+   - Notifikasi sukses/gagal menggunakan Session Flash Message.
+
+3. Tampilan & Desain:
+   - Gunakan Blade Templating dengan layout terpisah (misalnya layouts.app, peserta.index, peserta.create, peserta.edit).
+   - Hubungkan dengan berkas CSS kustom di folder public/css/style.css. Desain harus clean, modern (menggunakan font Google Fonts Outfit/Inter, warna slate & indigo, dengan badge status yang berwarna-warni yang estetik).
+   - Gunakan JavaScript kustom di public/js/app.js untuk efek dismissible alert dan dialog konfirmasi hapus data.
+
+4. Catatan Kode:
+   - Tulis komentar kode yang rapi dalam Bahasa Indonesia yang natural dan profesional (seperti dokumentasi resmi pengembang, tanpa menggunakan emoji atau emotikon).
+   - Tambahkan dokumentasi berkas README.md mengenai cara migrasi database, seeder, dan menjalankan aplikasinya secara lokal (php artisan serve).
